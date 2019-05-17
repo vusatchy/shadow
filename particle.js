@@ -39,9 +39,7 @@ class Particle {
                 if (pt) {
                     let d = p5.Vector.dist(this.pos, pt);
                     const a = ray.direction.heading() - this.heading;
-                    if(!mouseIsPressed) {
-                        d *= cos(a);
-                    }
+                    d *= cos(a);
                     if (d < record) {
                         record = d;
                         closest = pt;
